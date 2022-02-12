@@ -450,14 +450,18 @@
                                 <h1 id="url-scheme">URL Scheme</h1>
 <p>iCost &#x6CE8;&#x518C; <code>iCost://</code> &#xFF0C;&#x5E76;&#x901A;&#x8FC7;<code>X-Callback-URL</code>&#x534F;&#x8BAE;&#x4E0E;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x96C6;&#x6210;&#x3002;</p>
 <blockquote>
-<p>iCost://x-callback/action?key1=value1\&amp;key2=value2</p>
+<p>iCost://x-callback/action?key1=value1&amp;key2=value2</p>
 </blockquote>
 <h3 id="1-&#x6253;&#x5F00;&#x8D44;&#x4EA7;&#x9996;&#x9875;">1. &#x6253;&#x5F00;&#x8D44;&#x4EA7;&#x9996;&#x9875;</h3>
 <p><em><code>iCost://asset_main</code></em></p>
 <h3 id="2-&#x6253;&#x5F00;&#x7EDF;&#x8BA1;&#x9996;&#x9875;">2. &#x6253;&#x5F00;&#x7EDF;&#x8BA1;&#x9996;&#x9875;</h3>
 <p><em><code>iCost://chart_main</code></em></p>
 <h3 id="3-&#x6DFB;&#x52A0;&#x4E00;&#x7B14;&#x8BB0;&#x8D26;">3. &#x6DFB;&#x52A0;&#x4E00;&#x7B14;&#x8BB0;&#x8D26;</h3>
-<h4 id="31-&#x6DFB;&#x52A0;&#x6536;&#x652F;">3.1 &#x6DFB;&#x52A0;&#x6536;&#x652F;</h4>
+<h3 id="31-&#x6253;&#x5F00;&#x8BB0;&#x8D26;&#x9875;&#x9762;">3.1 &#x6253;&#x5F00;&#x8BB0;&#x8D26;&#x9875;&#x9762;</h3>
+<ul>
+<li><em><code>iCost://quick_record</code></em></li>
+</ul>
+<h4 id="32-&#x6DFB;&#x52A0;&#x6536;&#x652F;">3.2 &#x6DFB;&#x52A0;&#x6536;&#x652F;</h4>
 <ul>
 <li><em><code>&#x652F;&#x51FA;&#xFF1A;iCost://expense?[action parameters]</code></em></li>
 <li><em><code>&#x6536;&#x5165;&#xFF1A;iCost://income?[action parameters]</code></em></li>
@@ -522,7 +526,7 @@
 <p><code>iCost://expense?amount=3000&amp;currency=CNY&amp;account=&#x5FAE;&#x4FE1;&#x8D26;&#x6237;&amp;category=&#x5B9D;&#x5B9D;&#x73A9;&#x5177;&amp;book=&#x5B9D;&#x5B9D;&#x8D26;&#x672C;&amp;date=2021.01.01&amp;time=12:00&amp;claim=1&amp;remark=&#x73A9;&#x5177;&#x8F66;</code></p>
 <p>&#x6536;&#x5165;&#x4F8B;&#x5B50;&#xFF1A;</p>
 <p><code>iCost://income?amount=100&amp;currency=CNY&amp;account=&#x652F;&#x4ED8;&#x5B9D;&#x8D26;&#x6237;&amp;category=&#x7EA2;&#x5305;&amp;book=&#x9ED8;&#x8BA4;&#x8D26;&#x672C;&amp;date=2021.01.01&amp;time=12:00&amp;remark=&#x7EA2;&#x5305;&#x9886;&#x53D6;</code></p>
-<h4 id="32-&#x6DFB;&#x52A0;&#x4E00;&#x7B14;&#x8F6C;&#x8D26;">3.2 &#x6DFB;&#x52A0;&#x4E00;&#x7B14;&#x8F6C;&#x8D26;</h4>
+<h4 id="33-&#x6DFB;&#x52A0;&#x4E00;&#x7B14;&#x8F6C;&#x8D26;">3.3 &#x6DFB;&#x52A0;&#x4E00;&#x7B14;&#x8F6C;&#x8D26;</h4>
 <p><em><code>iCost://transfer?[action parameters]</code></em></p>
 <table>
 <thead>
@@ -588,6 +592,9 @@
 <p>&#x8F6C;&#x8D26;&#x4F8B;&#x5B50;&#xFF1A;</p>
 <p><code>iCost://transfer?amount=100&amp;currency=CNY&amp;from_account=&#x652F;&#x4ED8;&#x5B9D;&#x8D26;&#x6237;&amp;to_account=&#x5FAE;&#x4FE1;&#x8D26;&#x6237;&amp;book=&#x9ED8;&#x8BA4;&#x8D26;&#x672C;&amp;remark=&#x7EA2;&#x5305;&#x8F6C;&#x8D26;&#x5230;&#x5FAE;&#x4FE1;&amp;fee=0.1&amp;date=2021.01.01&amp;time=12:00</code></p>
 <hr>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C; url &#x4E2D;&#x5305;&#x542B;&#x4E2D;&#x6587;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C; url encode&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; icost &#x5185;&#x5D4C;&#x652F;&#x6301;&#x7684; action &#x6765;&#x8FDB;&#x884C;&#x5904;&#x7406; <img src="../gitbook/assets/url_01.jpeg" alt="">&#x3002;</p>
+</blockquote>
 
                                 
                                 </section>
@@ -631,7 +638,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"URL Scheme 方案，是需要启动 app 才可以完成执行的一种方案。如果希望不打开 app 就可以执行对应操作，请使用快捷指令实现。","title":"URL Scheme","level":"3.9","depth":1,"next":{"title":"消费分期","level":"3.10","depth":1,"path":"gao-ji-gong-neng/xiao-fei-fen-qi.md","ref":"gao-ji-gong-neng/xiao-fei-fen-qi.md","articles":[]},"previous":{"title":"周期入账（应用内部）","level":"3.8","depth":1,"path":"gao-ji-gong-neng/zhou-qi-ru-zhang-ying-yong-nei-bu.md","ref":"gao-ji-gong-neng/zhou-qi-ru-zhang-ying-yong-nei-bu.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"gao-ji-gong-neng/url-scheme-kai-fa-zhong.md","mtime":"2021-12-04T04:58:01.122Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T08:11:02.810Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"URL Scheme 方案，是需要启动 app 才可以完成执行的一种方案。如果希望不打开 app 就可以执行对应操作，请使用快捷指令实现。","title":"URL Scheme","level":"3.9","depth":1,"next":{"title":"消费分期","level":"3.10","depth":1,"path":"gao-ji-gong-neng/xiao-fei-fen-qi.md","ref":"gao-ji-gong-neng/xiao-fei-fen-qi.md","articles":[]},"previous":{"title":"周期入账（应用内部）","level":"3.8","depth":1,"path":"gao-ji-gong-neng/zhou-qi-ru-zhang-ying-yong-nei-bu.md","ref":"gao-ji-gong-neng/zhou-qi-ru-zhang-ying-yong-nei-bu.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sharing":{"google":false,"facebook":false,"twitter":false,"weibo":false,"all":false}},"gitbook":"*"},"file":{"path":"gao-ji-gong-neng/url-scheme-kai-fa-zhong.md","mtime":"2022-02-12T06:27:39.997Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-12T06:33:50.368Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
